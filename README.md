@@ -1,0 +1,2 @@
+# A reasonable Emacs config
+
