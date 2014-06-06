@@ -33,9 +33,11 @@
  my:el-get-packages
  '(el-get				; el-get is self-hosting
    escreen            			; screen for emacs, C-\ C-h
+   smex                                 ; M-x interface with Ido-style fuzzy matching.
    switch-window			; takes over C-x o
    auto-complete			; complete as you type with overlays
    sqlite-dump                          ; View SQLite database files in Emacs as '.dump' SQL text.
+   coffee-mode
    expand-region                        ; 按快捷键选中当前文本,可以将选择区域扩展或者收缩
    yasnippet                            ; 强大的文本模板输入工具
    helm
@@ -44,6 +46,11 @@
    rvm                                  ; 这个要在rinari之前
    rinari                               ; Rinari Is Not A Rails IDE
    smartparens                          ; 自动输入需要成对输入的字符如右括号之类的字符
+   cssh                                 ; ClusterSSH meets Emacs
+   undo-tree                            ; Treat undo history as a tree
+   ;; o-blog需要的组件
+   htmlize                              ; Convert buffer text and decorations to HTML.
+   o-blog                               ; Stand alone org-mode blog exporter.
    zencoding-mode))			; http://www.emacswiki.org/emacs/ZenCoding
 
 ;; Some recipes require extra tools to be installed
@@ -104,16 +111,9 @@
 
 ;;;;------------------------------------------------------
 
-;;ibus 设置ibus的输入法
-(push "~/.emacs.d/ibus-el/" load-path)
-(require 'ibus)
-(add-hook 'after-init-hook 'ibus-mode-on)
-;; Use S-SPC to toggle input status
-(ibus-define-common-key ?\S-\s nil)
-(global-set-key (kbd "s-SPC") 'ibus-toggle)
-(setq ibus-cursor-color '("red" "blue" "limegreen"))
-
-;;设置emacs的rvm开发环境
+;; 设置emacs的rvm开发环境
 (rvm-use-default) ;; use rvm's default ruby for the current Emacs session
 
-
+;; 个人定制undo tree 设置,全局undo模式
+(global-undo-tree-mode)
+(put 'downcase-region 'disabled nil)
