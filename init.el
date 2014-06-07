@@ -14,7 +14,6 @@
 ;;调用用下载的主题
 
 ;;禁用工具栏图标，和启动欢迎窗口
-(tool-bar-mode -1)
 (setq inhibit-startup-message t)
 (setq initial-scratch-message "")
 
@@ -32,6 +31,7 @@
 (setq
  my:el-get-packages
  '(el-get				; el-get is self-hosting
+   cl-lib
    escreen            			; screen for emacs, C-\ C-h
    smex                                 ; M-x interface with Ido-style fuzzy matching.
    switch-window			; takes over C-x o
@@ -43,6 +43,8 @@
    helm
    git-modes
    magit
+   ido-hacks
+   ido-gnus
    rvm                                  ; 这个要在rinari之前
    rinari                               ; Rinari Is Not A Rails IDE
    smartparens                          ; 自动输入需要成对输入的字符如右括号之类的字符
