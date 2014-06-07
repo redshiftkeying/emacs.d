@@ -18,7 +18,8 @@ cookies
 /newsticker
 /ac-comphist.dat
 \#*
-/elpa
+/elpa/*
+/el-get/*
 /el-get
 site-lisp/package/
 /swank

@@ -1,2 +1,3 @@
-# A reasonable Emacs config
+# 一些 Emacs 的配置
 
+** 本配置在emacs24版本下测试通过，暂不支持低版本
