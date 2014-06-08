@@ -10,6 +10,7 @@ bookmarks
 *~
 *.last
 .cvsignore
+recentf
 .*.lock
 /tramp
 /TODO

@@ -27,10 +27,20 @@
 ;;
 ;; Note: el-get-install requires git, so we know we have at least that.
 ;;
+(when (el-get-executable-find "cvs")
+  (add-to-list 'my:el-get-packages 'emacs-goodies-el)) ; the debian addons for emacs
+
+(when (el-get-executable-find "svn")
+  (loop for p in '(psvn    		; M-x svn-status
+		   yasnippet		; powerful snippet mode
+		   )
+	do (add-to-list 'my:el-get-packages p)))
+
 (setq my:el-get-packages
       (append
        my:el-get-packages
        (loop for src in el-get-sources collect (el-get-source-name src))))
+
 ;; install new packages and init already installed packages
 (el-get 'sync my:el-get-packages)
 
