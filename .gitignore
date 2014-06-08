@@ -8,6 +8,7 @@ CVS
 .svn
 bookmarks
 *~
+*.last
 .cvsignore
 .*.lock
 /tramp
