@@ -47,6 +47,7 @@
 (require 'init-uniquify) ;; file 和 buffer 的命名
 (require 'init-ibuffer) ;; 自适应窗口大小调整
 (require 'init-flycheck) ;; 语法错误高亮显示
+(require 'init-multi-term) ;; 配置多term窗口
 
 (require 'init-recentf) ;; 处理最近打开的文件列表
 (require 'init-ido) ;; ido不解释

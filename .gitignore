@@ -13,6 +13,7 @@ bookmarks
 recentf
 .*.lock
 /tramp
+/snippets
 /TODO
 /anything-c-adaptive-history
 /.org-id-locations
