@@ -2,12 +2,11 @@
 ;;;设置文件。
 ;;;--------------------------------------------
 ;;; Code:
-;;设置benchmark-init先于el-get启动
-(let ((benchmark-init.el "~/.emacs.d/el-get/benchmark-init/benchmark-init.el"))
-  (when (file-exists-p benchmark-init.el)
-    (load benchmark-init.el)))
-;;设置benchmark的配置文件
+;;设置初始化文件（package配置文件），配置文件（el-get配置文件）目录。
 (add-to-list 'load-path (expand-file-name "init" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "conf" user-emacs-directory))
+;;设置benchmark的配置文件
+;;设置benchmark-init先于el-get启动
 (require 'init-benchmarking) ;; 开始监控模块启动参数
 ;;参见benchmark-init/show-durations-tree与benchmark-init/show-durations-tabulated命令
 
@@ -118,6 +117,10 @@
 ;; 个人定制undo tree 设置,全局undo模式
 (global-undo-tree-mode)
 (put 'downcase-region 'disabled nil)
+
+;; 配置el-get文件的设定，配置文件在conf文件夹内
+(require 'conf-yasnippet)
+(require 'conf-zencoding)
 
 
 (provide 'init)

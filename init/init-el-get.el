@@ -12,11 +12,11 @@
  my:el-get-packages
  '(el-get				; el-get is self-hosting
    diminish
-   fuzzy
-   popup
+   fuzzy                                ; 模糊搜索代码提示,不需配置
+   popup                                ; 代码提示的美化效果，不需配置
    sqlite-dump                          ; View SQLite database files in Emacs as '.dump' SQL text.
    yasnippet                            ; 强大的文本模板输入工具
-   helm
+   helm                                 ; 一个自动补齐的框架，暂无设置，使用自动配置
    cssh                                 ; ClusterSSH meets Emacs
    o-blog                               ; Stand alone org-mode blog exporter.
    emacs-w3m
