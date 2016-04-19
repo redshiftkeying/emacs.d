@@ -32,7 +32,6 @@
 ;;--------------------------------------------
 (require-package 'wgrep) ;; grep包，控制grep的功能
 (require-package 'project-local-variables) ;; 为程序项目文件设置环境，TODO：用DirVarsPackage替换
-(require-package 'diminish) ;; 自定义modeline显示
 (require-package 'scratch) ;; 设置scrath-buffer
 (require-package 'mwe-log-commands) ;; 记录操作命令
 
